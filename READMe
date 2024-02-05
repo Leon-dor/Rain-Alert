@@ -1,0 +1,9 @@
+This script checks the weather forecast for the next few hours at a specific location (latitude: 46.947975, longitude: 7.447447).
+If it’s going to rain, it sends a text message to a specified phone number using the Twilio service.
+
+It uses the OpenWeatherMap API to get the weather forecast for the next few hours ("cnt": 4 means it retrieves data for the next 4 hours).
+The latitude and longitude for the location are specified in weather_params.
+It checks the weather condition code for each hour.
+If any of these codes is less than 700, this means some kind of precipitation is expected (codes less than 700 are various types of rain or snow according to the OpenWeatherMap’s Weather Condition codes).
+If it’s going to rain in the next few hours, it uses the Twilio service to send a text message to a specified phone number.
+The message says “It’s going to rain today. Remember to bring an ☔️”.
